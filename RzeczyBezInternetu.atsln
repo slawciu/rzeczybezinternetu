@@ -9,6 +9,10 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "HelloFromTheOtherSide", "He
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Interrupts", "Interrupts\Interrupts.cproj", "{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Timer", "Timer\Timer.cproj", "{23B0A293-A4F3-4611-BB63-17ECFF6720DA}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "PulseWidthModulation", "PulseWidthModulation\PulseWidthModulation.cproj", "{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -27,6 +31,14 @@ Global
 		{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}.Debug|AVR.Build.0 = Debug|AVR
 		{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}.Release|AVR.ActiveCfg = Release|AVR
 		{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}.Release|AVR.Build.0 = Release|AVR
+		{23B0A293-A4F3-4611-BB63-17ECFF6720DA}.Debug|AVR.ActiveCfg = Debug|AVR
+		{23B0A293-A4F3-4611-BB63-17ECFF6720DA}.Debug|AVR.Build.0 = Debug|AVR
+		{23B0A293-A4F3-4611-BB63-17ECFF6720DA}.Release|AVR.ActiveCfg = Release|AVR
+		{23B0A293-A4F3-4611-BB63-17ECFF6720DA}.Release|AVR.Build.0 = Release|AVR
+		{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}.Debug|AVR.ActiveCfg = Debug|AVR
+		{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}.Debug|AVR.Build.0 = Debug|AVR
+		{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}.Release|AVR.ActiveCfg = Release|AVR
+		{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
