@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "BlinkWorld", "BlinkWorld\BlinkWorld.cproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "HelloFromTheOtherSide", "HelloFromTheOtherSide\HelloFromTheOtherSide.cproj", "{8E76EACC-AA1C-428D-8C29-C81BA5978DAA}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Interrupts", "Interrupts\Interrupts.cproj", "{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -15,6 +19,14 @@ Global
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.Build.0 = Debug|AVR
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.ActiveCfg = Release|AVR
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.Build.0 = Release|AVR
+		{8E76EACC-AA1C-428D-8C29-C81BA5978DAA}.Debug|AVR.ActiveCfg = Debug|AVR
+		{8E76EACC-AA1C-428D-8C29-C81BA5978DAA}.Debug|AVR.Build.0 = Debug|AVR
+		{8E76EACC-AA1C-428D-8C29-C81BA5978DAA}.Release|AVR.ActiveCfg = Release|AVR
+		{8E76EACC-AA1C-428D-8C29-C81BA5978DAA}.Release|AVR.Build.0 = Release|AVR
+		{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}.Debug|AVR.ActiveCfg = Debug|AVR
+		{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}.Debug|AVR.Build.0 = Debug|AVR
+		{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}.Release|AVR.ActiveCfg = Release|AVR
+		{4FDAF4CC-C4AB-41DC-B470-98F1ADBFFDA3}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,3 +31,5 @@
 # Debug files
 *.dSYM/
 /BlinkWorld/Debug
+/HelloFromTheOtherSide/Debug
+/Interrupts/Debug
