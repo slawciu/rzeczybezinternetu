@@ -1,6 +1,8 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
+volatile uint16_t debouncingGuard = 0;
+
 int main(void)
 {
 	// set pd2 (INT0) as input
@@ -31,7 +33,15 @@ int main(void)
 
 ISR(INT0_vect)
 {
-	PORTB ^= (1 << PB0);
-	PORTB ^= (1 << PB1);
+    if (debouncingGuard % 4500 == 0)
+    {
+        PORTB ^= (1 << PB0);
+        PORTB ^= (1 << PB1);
+        debouncingGuard++;
+    }
+    else
+    {
+        debouncingGuard++;
+    }                
 }
 
