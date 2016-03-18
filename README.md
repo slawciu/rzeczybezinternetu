@@ -16,10 +16,10 @@ Obsługa przerwań - przycisk.
  - [W repozytorium][I_repo]
  - [Na blogu][I_post]
  
- ## PulseWidthModulation
- Przykład użycia Fast PWM mode dla Timer0
-  - [W repozytorium][PWM_repo]
-  - [Na blogu][PWM_post]
+## PulseWidthModulation
+Przykład użycia Fast PWM mode dla Timer0
+ - [W repozytorium][PWM_repo]
+ - [Na blogu][PWM_post]
 
 [//]:#
 [BW_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/BlinkWorld>
