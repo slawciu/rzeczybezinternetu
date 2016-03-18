@@ -6,20 +6,23 @@ int main(void)
 	DDRB |= (1 << PB0);
 	
 	// pb3 - input
-	DDRB &= (1 << PB3);
+	DDRB &= ~(1 << PB3);
 	
 	// pull-up for pb3
 	PORTB |= (1 << PB3);
+    
+    // turn off led
+    PORTB |= (1 << PB0);
 	
     while (1)
     {
-	    if (PINB & (1 << PB3))
+	    if ((PINB & (1 << PB3)) == 0)
 	    {
-		    PORTB |= (1 << PB0);
+		    PORTB &= ~(1 << PB0);
 	    }
 	    else
 	    {
-		    PORTB &= ~(1 << PB0);
+		    PORTB |= (1 << PB0);
 	    }
     }
 }
