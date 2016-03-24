@@ -13,6 +13,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Timer", "Timer\Timer.cproj"
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "PulseWidthModulation", "PulseWidthModulation\PulseWidthModulation.cproj", "{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "LetsTalk", "LetsTalk\LetsTalk.cproj", "{9186892C-E535-4516-84F7-CC4B5490CFCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -39,6 +41,10 @@ Global
 		{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}.Debug|AVR.Build.0 = Debug|AVR
 		{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}.Release|AVR.ActiveCfg = Release|AVR
 		{201E5C57-CA19-43BF-8F14-CE665AF4D9C7}.Release|AVR.Build.0 = Release|AVR
+		{9186892C-E535-4516-84F7-CC4B5490CFCE}.Debug|AVR.ActiveCfg = Debug|AVR
+		{9186892C-E535-4516-84F7-CC4B5490CFCE}.Debug|AVR.Build.0 = Debug|AVR
+		{9186892C-E535-4516-84F7-CC4B5490CFCE}.Release|AVR.ActiveCfg = Release|AVR
+		{9186892C-E535-4516-84F7-CC4B5490CFCE}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

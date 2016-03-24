@@ -21,6 +21,12 @@ Przykład użycia Fast PWM mode dla Timer0
  - [W repozytorium][PWM_repo]
  - [Na blogu][PWM_post]
 
+## LetsTalk
+Przykład użycia USART0
+ - [W repozytorium][USART_repo]
+ - [Na blogu][USART_post]
+
+ 
 [//]:#
 [BW_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/BlinkWorld>
 [BW_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/wyjscie-blink-world.html>
@@ -30,4 +36,6 @@ Przykład użycia Fast PWM mode dla Timer0
 [I_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/ja-panu-nie-przerywaem.html>
 [PWM_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/PulseWidthModulation>
 [PWM_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/szczesliwi-czasu-nie-licza-timercounter.html>
+[USART_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/LetsTalk>
+[USART_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/porozmawiajmy-usart-konfiguracja.html>
 
