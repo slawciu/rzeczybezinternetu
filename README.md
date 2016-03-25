@@ -26,6 +26,11 @@ Przykład użycia USART0
  - [W repozytorium][USART_repo]
  - [Na blogu][USART_post]
 
+## EEPROM
+Przykład użycia EEPROM
+ - [W repozytorium][EEPROM_repo]
+ - [Na blogu][EEPROM_post]
+
  
 [//]:#
 [BW_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/BlinkWorld>
@@ -38,4 +43,5 @@ Przykład użycia USART0
 [PWM_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/szczesliwi-czasu-nie-licza-timercounter.html>
 [USART_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/LetsTalk>
 [USART_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/porozmawiajmy-usart-konfiguracja.html>
-
+[EEPROM_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/EEPROM>
+[EEPROM_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/pamietaj.html>
