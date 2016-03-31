@@ -15,6 +15,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "PulseWidthModulation", "Pul
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "LetsTalk", "LetsTalk\LetsTalk.cproj", "{9186892C-E535-4516-84F7-CC4B5490CFCE}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "EEPROM", "EEPROM\EEPROM.cproj", "{436F4689-A766-479A-8A58-9E16CAFE44B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -45,6 +47,10 @@ Global
 		{9186892C-E535-4516-84F7-CC4B5490CFCE}.Debug|AVR.Build.0 = Debug|AVR
 		{9186892C-E535-4516-84F7-CC4B5490CFCE}.Release|AVR.ActiveCfg = Release|AVR
 		{9186892C-E535-4516-84F7-CC4B5490CFCE}.Release|AVR.Build.0 = Release|AVR
+		{436F4689-A766-479A-8A58-9E16CAFE44B5}.Debug|AVR.ActiveCfg = Debug|AVR
+		{436F4689-A766-479A-8A58-9E16CAFE44B5}.Debug|AVR.Build.0 = Debug|AVR
+		{436F4689-A766-479A-8A58-9E16CAFE44B5}.Release|AVR.ActiveCfg = Release|AVR
+		{436F4689-A766-479A-8A58-9E16CAFE44B5}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
