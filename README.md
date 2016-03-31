@@ -26,12 +26,15 @@ Przykład użycia USART0
  - [W repozytorium][USART_repo]
  - [Na blogu][USART_post]
 
-## EEPROM
+## Memory
 Przykład użycia EEPROM
- - [W repozytorium][EEPROM_repo]
- - [Na blogu][EEPROM_post]
+ - [W repozytorium][Memory_repo]
+ - [Na blogu][Memory_post]
 
- 
+## State 
+Przykład użycia EEPROM
+ - [W repozytorium][State_repo]
+ - [Na blogu][State_post]
 [//]:#
 [BW_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/BlinkWorld>
 [BW_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/wyjscie-blink-world.html>
@@ -43,5 +46,7 @@ Przykład użycia EEPROM
 [PWM_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/szczesliwi-czasu-nie-licza-timercounter.html>
 [USART_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/LetsTalk>
 [USART_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/porozmawiajmy-usart-konfiguracja.html>
-[EEPROM_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/EEPROM>
-[EEPROM_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/pamietaj.html>
+[Memory_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/Memory>
+[Memory_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/pamietaj.html>
+[State_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/State>
+[State_post]: <http://rzeczybezinternetu.blogspot.com/2016/03/czy-w-moim-avr-jest-miejsce-na-czasownik.html>
