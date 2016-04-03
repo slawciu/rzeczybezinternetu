@@ -21,8 +21,6 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Memory", "Memory\Memory.cpr
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "TwoImportantWires", "TwoImportantWires\TwoImportantWires.cproj", "{B71B2AD3-5D7C-485C-BFA6-A057DA191758}"
 EndProject
-Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "OneImportantWire", "OneImportantWire\OneImportantWire.cproj", "{7E1DB2DE-07D3-4EAA-A3D4-BA565D53339C}"
-EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ImportantWire", "ImportantWire\ImportantWire.cproj", "{6ADEB2F5-40B7-4B96-94BD-68E28055ECA3}"
 EndProject
 Global
@@ -67,10 +65,6 @@ Global
 		{B71B2AD3-5D7C-485C-BFA6-A057DA191758}.Debug|AVR.Build.0 = Debug|AVR
 		{B71B2AD3-5D7C-485C-BFA6-A057DA191758}.Release|AVR.ActiveCfg = Release|AVR
 		{B71B2AD3-5D7C-485C-BFA6-A057DA191758}.Release|AVR.Build.0 = Release|AVR
-		{7E1DB2DE-07D3-4EAA-A3D4-BA565D53339C}.Debug|AVR.ActiveCfg = Debug|AVR
-		{7E1DB2DE-07D3-4EAA-A3D4-BA565D53339C}.Debug|AVR.Build.0 = Debug|AVR
-		{7E1DB2DE-07D3-4EAA-A3D4-BA565D53339C}.Release|AVR.ActiveCfg = Release|AVR
-		{7E1DB2DE-07D3-4EAA-A3D4-BA565D53339C}.Release|AVR.Build.0 = Release|AVR
 		{6ADEB2F5-40B7-4B96-94BD-68E28055ECA3}.Debug|AVR.ActiveCfg = Debug|AVR
 		{6ADEB2F5-40B7-4B96-94BD-68E28055ECA3}.Debug|AVR.Build.0 = Debug|AVR
 		{6ADEB2F5-40B7-4B96-94BD-68E28055ECA3}.Release|AVR.ActiveCfg = Release|AVR
