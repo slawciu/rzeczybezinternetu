@@ -9,11 +9,15 @@
 #define DQ 2 // pin DQ termometru DS1822-PAR
 #define THERM_DDRx DDRD
 #define THERM_PINx PIND
+
+#define STRONG_PULL_UP_DDR DDRC
 #define STRONG_PULL_UP_PORT PORTC
 #define STRONG_PULL_UP_PIN 1
+
 #define SET_DQ THERM_DDRx &= ~(1 << DQ) // linia DQ w stan wysoki
 #define CLR_DQ THERM_DDRx |= (1 << DQ)	// linia DQ w stan niski
 #define IN_DQ THERM_PINx & (1 << DQ)	// sprawdzenie stanu linii DQ (odczyt)
+
 #define STRONG_PULL_UP_ON STRONG_PULL_UP_PORT |= (1 << STRONG_PULL_UP_PIN)
 #define STRONG_PULL_UP_OFF STRONG_PULL_UP_PORT &= ~(1 << STRONG_PULL_UP_PIN)
 
@@ -37,7 +41,7 @@ void UsartFlush()
     UCSR0B |= (1<<RXEN0);
 }
 
-void UsartWrite(char* text)
+void UsartWrite(uint8_t* text)
 {
     while(*text)
     {
@@ -51,67 +55,80 @@ void UsartWrite(char* text)
     }
 }
 
-// procedura reset
-void ow_reset(void)
+void OneWireReset(void)
 {
     CLR_DQ; // stan niski na linii 1wire
     
-    _delay_us(480); // opóŸnienie ok 480us
+    _delay_us(480); // opoznienie ok 480us
 
     SET_DQ;// stan wysoki na linii 1wire
     
-    _delay_us(480); // opóŸnienie ok 480 us
+    _delay_us(480); // opoznienie ok 480 us
 }
-// procedura zapisu bitu na liniê 1wire
-void ow_write_bit(char b)
+
+void OneWireWriteBit(uint8_t bit)
 {
     CLR_DQ; // stan niski na linii 1wire
-    _delay_us(10); // opóŸnienie 10us
-    if(b) SET_DQ; // jeœli parametr jest niezerowy to ustaw stan wysoki na linii
-    _delay_us(100); // opóŸnienie 100us
+    _delay_us(10); // opoznienie 10us
+    if(bit)
+	{ 
+		SET_DQ; // jezeli parametr jest niezerowy to ustaw stan wysoki na linii
+	}
+    _delay_us(100); // opoznienie 100us
     SET_DQ; // stan wysoki na linii 1wire
 }
 
-char ow_read_bit(void)
+uint8_t OneWireReadBit(void)
 {
     CLR_DQ;	// stan niski na linii 1Wire
     _delay_us(3);	// opoznienie 3us
     SET_DQ;	// stan wysoki na linii 1Wire
     _delay_us(15); // opoznienie 15us
-    if(IN_DQ) return 1; else return 0; // testowanie linii, funkcja zwraca stan
+    if(IN_DQ)
+	{ 
+		return 1;
+	}
+	else
+	{
+		return 0; // testowanie linii, funkcja zwraca stan
+	}
 }
 
-unsigned char ow_read_byte(void)
+uint8_t OneWireReadByte(void)
 {
-    unsigned char i; // iterator pêtli
-    unsigned char value = 0; // odczytany bajt
-    for (i=0;i<8;i++){ // odczyt 8 bitów z magistrali DQ
-        if(ow_read_bit()) value|=0x01<<i;
-        _delay_us(9); // opóŸnienie 9us
+    uint8_t i; // iterator petli
+    uint8_t value = 0; // odczytany bajt
+    for (i=0;i<8;i++)
+	{ 
+		// odczyt 8 bitów z magistrali DQ
+        if(OneWireReadBit())
+		{
+			value|=0x01<<i;
+		}
+        _delay_us(9); // opoznienie 9us
     }
     return(value);
 }
 
-void ow_write_byte(char val)
+void OneWireWriteByte(uint8_t val)
 {
-    unsigned char i; // iterator pêtli
-    unsigned char temp;
-    for (i=0; i<8; i++){ // wys³anie 8 bitów na magistralê 1Wire
+    uint8_t i; // iterator petli
+    uint8_t temp;
+    for (i=0; i<8; i++)
+	{
+		// wyslanie 8 bitów na magistrale 1-Wire
         temp = val >> i;
         temp &= 0x01;
-        ow_write_bit(temp);
+        OneWireWriteBit(temp);
     }
     _delay_us(9);
 }
 
-/* W tablicy bêd¹ formowane komunikaty tekstowe
-   wysy³ane do wyœwietlacza */
-char str[17]="                 ";
-double temperature=0.0;
-double t = 0.0;
-char scratchpad[9];
-void odczyt_temperatury(){
+void ReadTemperature(){
     uint8_t i;
+	double temperature=0.0;
+	uint8_t str[17]="                 ";
+	uint8_t scratchpad[9];
     /*
         stratchpad[]:
         0 - lsb
@@ -123,51 +140,50 @@ void odczyt_temperatury(){
         6 - reserved
         7 - reserved
         8 - crc
-        
     */
     STRONG_PULL_UP_OFF;
-    ow_reset();			 // reset 1Wire
-    ow_write_byte(0xCC); // skip ROM
-    ow_write_byte(0x44); // convertT
+    OneWireReset();			 // reset 1-Wire
+    OneWireWriteByte(0xCC); // komenda skip ROM
+    OneWireWriteByte(0x44); // komenda convertT
     STRONG_PULL_UP_ON;
     _delay_ms(750);		// delay 750ms
-    //_delay_ms(250);
-//	_delay_ms(250);
     STRONG_PULL_UP_OFF;
-    ow_reset();			 // reset 1Wire
-    ow_write_byte(0xCC); // skip ROM
-    ow_write_byte(0xBE); // read Scratchpad
-    for(i=0; i<9; i++)	 
-        scratchpad[i] = ow_read_byte();
+    OneWireReset();			 // reset 1Wire
+    OneWireWriteByte(0xCC); // komenda skip ROM
+    OneWireWriteByte(0xBE); // komenda read Scratchpad
+    
+	for(i=0; i<9; i++)	 
+    {
+        scratchpad[i] = OneWireReadByte();
+    }
 
     uint16_t buffer = scratchpad[0];
     buffer |= (scratchpad[1] << 8);
     temperature = (double)(buffer / 16.0);
 
-    dtostrf(temperature, 0,4, str); // temperature to string
+    dtostrf(temperature, 0,4, str); // konwersja do napisu
     str[15] = '\r';
     str[16] = '\n';
-    UsartWrite(str); // wys³anie temperatury
+    UsartWrite(str); // wyslanie temperatury
 }
 
-volatile char data;
+volatile uint8_t command;
 
 int main(void)
 {
-    DDRC |= (1 << PC1);
+    STRONG_PULL_UP_DDR |= (1 << STRONG_PULL_UP_PIN);
     USART0Init();
     
     // initialize interrupts
     sei();
     
     while(1){
-        switch(data){
+        switch(command){
             case 't':
-               // cli();
-                PORTC &= ~(1 << 1);
-                odczyt_temperatury();
-                UsartWrite("temperatura!");
-               // sei();
+                cli();
+                STRONG_PULL_UP_OFF;
+                ReadTemperature();
+				sei();
                 break;
             default:
                 break;
@@ -180,5 +196,5 @@ int main(void)
 // onUsart
 ISR(USART0_RXC_vect)
 {
-    data = UDR0;
+    command = UDR0;
 }
