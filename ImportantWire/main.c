@@ -125,6 +125,7 @@ void odczyt_temperatury(){
         8 - crc
         
     */
+
     STRONG_PULL_UP_OFF;
     ow_reset();			 // reset 1Wire
     ow_write_byte(0xCC); // skip ROM
@@ -145,12 +146,20 @@ void odczyt_temperatury(){
     temperature = (double)(buffer / 16.0);
 
     dtostrf(temperature, 0,4, str); // temperature to string
-    str[15] = '\r';
-    str[16] = '\n';
+    
     UsartWrite(str); // wys³anie temperatury
+    UsartWrite("\r\n");
 }
 
 volatile char data;
+
+typedef enum
+{
+    Idle = 0,
+    MeasurementOn
+} States;
+
+uint8_t state = Idle;
 
 int main(void)
 {
@@ -162,15 +171,26 @@ int main(void)
     
     while(1){
         switch(data){
+            case 'T':
+                state = MeasurementOn;        
+                break;
             case 't':
-               // cli();
-                PORTC &= ~(1 << 1);
-                odczyt_temperatury();
-                UsartWrite("temperatura!");
-               // sei();
+                state = Idle;
                 break;
             default:
+                state = Idle;
                 break;
+        }
+        
+        if (state == MeasurementOn)
+        {
+            PORTC &= ~(1 << 1);
+            odczyt_temperatury();
+            _delay_ms(500);
+        }
+        else
+        {
+            
         }
     }
 
