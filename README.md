@@ -35,6 +35,12 @@ Przykład użycia EEPROM
 Przykład użycia EEPROM
  - [W repozytorium][State_repo]
  - [Na blogu][State_post]
+ 
+## ImportantWire 
+Przykład użycia 1-Wire
+ - [W repozytorium][1Wire_repo]
+ - [Na blogu][1Wire_post]
+ 
 [//]:#
 [BW_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/BlinkWorld>
 [BW_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/wyjscie-blink-world.html>
@@ -50,3 +56,5 @@ Przykład użycia EEPROM
 [Memory_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/pamietaj.html>
 [State_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/State>
 [State_post]: <http://rzeczybezinternetu.blogspot.com/2016/03/czy-w-moim-avr-jest-miejsce-na-czasownik.html>
+[1Wire_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/ImportantWire>
+[1Wire_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/wazna-linia-cdds1822-par.html>
