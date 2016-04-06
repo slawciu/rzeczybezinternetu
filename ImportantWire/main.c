@@ -169,6 +169,13 @@ void ReadTemperature(){
 
 volatile uint8_t command;
 
+typedef enum
+{
+    Idle = 0,
+    MeasurementOn
+} States;
+
+uint8_t state = Idle;
 int main(void)
 {
     STRONG_PULL_UP_DDR |= (1 << STRONG_PULL_UP_PIN);
@@ -178,15 +185,27 @@ int main(void)
     sei();
     
     while(1){
-        switch(command){
+        switch(data){
+            case 'T':
+                state = MeasurementOn;        
+                break;
             case 't':
-                cli();
-                STRONG_PULL_UP_OFF;
-                ReadTemperature();
-				sei();
+                state = Idle;
                 break;
             default:
+                state = Idle;
                 break;
+        }
+        
+        if (state == MeasurementOn)
+        {
+            PORTC &= ~(1 << 1);
+            odczyt_temperatury();
+            _delay_ms(500);
+        }
+        else
+        {
+            
         }
     }
 
@@ -196,5 +215,5 @@ int main(void)
 // onUsart
 ISR(USART0_RXC_vect)
 {
-    command = UDR0;
+    data = UDR0;
 }
