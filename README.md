@@ -36,6 +36,12 @@ Wykorzystanie stanu programu
  - [W repozytorium][State_repo]
  - [Na blogu][State_post]
  
+## ImportantWire 
+Przykład użycia 1-Wire
+ - [W repozytorium][1Wire_repo]
+ - [Na blogu][1Wire_post]
+ 
+ 
 ## Init SMS 
 Uruchomienie modułu GSM Fibocom G510
  - [W repozytorium][InitSMS_repo]
@@ -57,5 +63,6 @@ Uruchomienie modułu GSM Fibocom G510
 [Memory_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/pamietaj.html>
 [State_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/State>
 [State_post]: <http://rzeczybezinternetu.blogspot.com/2016/03/czy-w-moim-avr-jest-miejsce-na-czasownik.html>
-[InitSMS_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/InitSMS>
+[1Wire_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/ImportantWire>
+[1Wire_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/wazna-linia-cdds1822-par.html>[InitSMS_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/InitSMS>
 [InitSMS_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/sms-init.html>

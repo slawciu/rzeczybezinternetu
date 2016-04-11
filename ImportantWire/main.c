@@ -71,9 +71,9 @@ void OneWireWriteBit(uint8_t bit)
     CLR_DQ; // stan niski na linii 1wire
     _delay_us(10); // opoznienie 10us
     if(bit)
-	{ 
-		SET_DQ; // jezeli parametr jest niezerowy to ustaw stan wysoki na linii
-	}
+    { 
+        SET_DQ; // jezeli parametr jest niezerowy to ustaw stan wysoki na linii
+    }
     _delay_us(100); // opoznienie 100us
     SET_DQ; // stan wysoki na linii 1wire
 }
@@ -85,13 +85,13 @@ uint8_t OneWireReadBit(void)
     SET_DQ;	// stan wysoki na linii 1Wire
     _delay_us(15); // opoznienie 15us
     if(IN_DQ)
-	{ 
-		return 1;
-	}
-	else
-	{
-		return 0; // testowanie linii, funkcja zwraca stan
-	}
+    { 
+        return 1;
+    }
+    else
+    {
+        return 0; // testowanie linii, funkcja zwraca stan
+    }
 }
 
 uint8_t OneWireReadByte(void)
@@ -99,12 +99,12 @@ uint8_t OneWireReadByte(void)
     uint8_t i; // iterator petli
     uint8_t value = 0; // odczytany bajt
     for (i=0;i<8;i++)
-	{ 
-		// odczyt 8 bitów z magistrali DQ
+    { 
+        // odczyt 8 bitów z magistrali DQ
         if(OneWireReadBit())
-		{
-			value|=0x01<<i;
-		}
+        {
+            value|=0x01<<i;
+        }
         _delay_us(9); // opoznienie 9us
     }
     return(value);
@@ -115,8 +115,8 @@ void OneWireWriteByte(uint8_t val)
     uint8_t i; // iterator petli
     uint8_t temp;
     for (i=0; i<8; i++)
-	{
-		// wyslanie 8 bitów na magistrale 1-Wire
+    {
+        // wyslanie 8 bitów na magistrale 1-Wire
         temp = val >> i;
         temp &= 0x01;
         OneWireWriteBit(temp);
@@ -124,11 +124,12 @@ void OneWireWriteByte(uint8_t val)
     _delay_us(9);
 }
 
-void ReadTemperature(){
+void ReadTemperature()
+{
     uint8_t i;
-	double temperature=0.0;
-	uint8_t str[17]="                 ";
-	uint8_t scratchpad[9];
+    double temperature=0.0;
+    uint8_t str[17]="                 ";
+    uint8_t scratchpad[9];
     /*
         stratchpad[]:
         0 - lsb
@@ -152,7 +153,7 @@ void ReadTemperature(){
     OneWireWriteByte(0xCC); // komenda skip ROM
     OneWireWriteByte(0xBE); // komenda read Scratchpad
     
-	for(i=0; i<9; i++)	 
+    for(i=0; i<9; i++)	 
     {
         scratchpad[i] = OneWireReadByte();
     }
@@ -162,12 +163,19 @@ void ReadTemperature(){
     temperature = (double)(buffer / 16.0);
 
     dtostrf(temperature, 0,4, str); // konwersja do napisu
-    str[15] = '\r';
-    str[16] = '\n';
     UsartWrite(str); // wyslanie temperatury
+    UsartWrite("\r\n");
 }
 
 volatile uint8_t command;
+
+typedef enum
+{
+    Idle = 0,
+    MeasurementOn
+} States;
+
+uint8_t state = Idle;
 
 int main(void)
 {
@@ -177,16 +185,26 @@ int main(void)
     // initialize interrupts
     sei();
     
-    while(1){
-        switch(command){
+    while(1)
+    {
+        switch(command)
+        {
+            case 'T':
+                state = MeasurementOn;        
+                break;
             case 't':
-                cli();
-                STRONG_PULL_UP_OFF;
-                ReadTemperature();
-				sei();
+                state = Idle;
                 break;
             default:
+                state = Idle;
                 break;
+        }
+        
+        if (state == MeasurementOn)
+        {
+            PORTC &= ~(1 << 1);
+            ReadTemperature();
+            _delay_ms(500);
         }
     }
 
