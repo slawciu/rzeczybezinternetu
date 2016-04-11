@@ -64,5 +64,6 @@ Uruchomienie modułu GSM Fibocom G510
 [State_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/State>
 [State_post]: <http://rzeczybezinternetu.blogspot.com/2016/03/czy-w-moim-avr-jest-miejsce-na-czasownik.html>
 [1Wire_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/ImportantWire>
-[1Wire_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/wazna-linia-cdds1822-par.html>[InitSMS_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/InitSMS>
+[1Wire_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/wazna-linia-cdds1822-par.html>
+[InitSMS_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/InitSMS>
 [InitSMS_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/sms-init.html>
