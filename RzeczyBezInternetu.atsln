@@ -21,6 +21,10 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Memory", "Memory\Memory.cpr
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ImportantWire", "ImportantWire\ImportantWire.cproj", "{6ADEB2F5-40B7-4B96-94BD-68E28055ECA3}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ReceiveSMS", "ReceiveSMS\ReceiveSMS.cproj", "{11BBC9BE-173A-4252-ADF9-637E43F18C20}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "InitSMS", "InitSMS\InitSMS.cproj", "{5CDA9753-5F9B-4B11-9D7D-83B8E5F2BBEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -63,6 +67,14 @@ Global
 		{6ADEB2F5-40B7-4B96-94BD-68E28055ECA3}.Debug|AVR.Build.0 = Debug|AVR
 		{6ADEB2F5-40B7-4B96-94BD-68E28055ECA3}.Release|AVR.ActiveCfg = Release|AVR
 		{6ADEB2F5-40B7-4B96-94BD-68E28055ECA3}.Release|AVR.Build.0 = Release|AVR
+		{11BBC9BE-173A-4252-ADF9-637E43F18C20}.Debug|AVR.ActiveCfg = Debug|AVR
+		{11BBC9BE-173A-4252-ADF9-637E43F18C20}.Debug|AVR.Build.0 = Debug|AVR
+		{11BBC9BE-173A-4252-ADF9-637E43F18C20}.Release|AVR.ActiveCfg = Release|AVR
+		{11BBC9BE-173A-4252-ADF9-637E43F18C20}.Release|AVR.Build.0 = Release|AVR
+		{5CDA9753-5F9B-4B11-9D7D-83B8E5F2BBEC}.Debug|AVR.ActiveCfg = Debug|AVR
+		{5CDA9753-5F9B-4B11-9D7D-83B8E5F2BBEC}.Debug|AVR.Build.0 = Debug|AVR
+		{5CDA9753-5F9B-4B11-9D7D-83B8E5F2BBEC}.Release|AVR.ActiveCfg = Release|AVR
+		{5CDA9753-5F9B-4B11-9D7D-83B8E5F2BBEC}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
