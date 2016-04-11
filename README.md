@@ -32,9 +32,16 @@ Przykład użycia EEPROM
  - [Na blogu][Memory_post]
 
 ## State 
-Przykład użycia EEPROM
+Wykorzystanie stanu programu
  - [W repozytorium][State_repo]
  - [Na blogu][State_post]
+ 
+## Init SMS 
+Uruchomienie modułu GSM Fibocom G510
+ - [W repozytorium][InitSMS_repo]
+ - [Na blogu][InitSMS_post]
+ 
+  
 [//]:#
 [BW_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/BlinkWorld>
 [BW_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/wyjscie-blink-world.html>
@@ -50,3 +57,5 @@ Przykład użycia EEPROM
 [Memory_post]:<http://rzeczybezinternetu.blogspot.com/2016/03/pamietaj.html>
 [State_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/State>
 [State_post]: <http://rzeczybezinternetu.blogspot.com/2016/03/czy-w-moim-avr-jest-miejsce-na-czasownik.html>
+[InitSMS_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/InitSMS>
+[InitSMS_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/sms-init.html>
