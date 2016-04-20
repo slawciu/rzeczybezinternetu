@@ -1,5 +1,5 @@
 # Rzeczy bez Internetu
-Projekt agregujący proste przykłady użycia podstawowych mechanizmów mikrkokontrolera AVR Atmega.
+Projekt agregujący proste przykłady użycia podstawowych mechanizmów mikrokontrolera AVR Atmega.
 
 ## BlinkWorld
 Mruganie diodą, port ustawiony jako wyjście.
@@ -47,6 +47,11 @@ Uruchomienie modułu GSM Fibocom G510
  - [W repozytorium][InitSMS_repo]
  - [Na blogu][InitSMS_post]
  
+##  ReceiveAndSendSMS
+Wysyłanie i odbieranie SMSów za pośrednictwem modułu GSM Fibocom G510
+ - [W repozytorium][SMS_repo]
+ - [Na blogu 1][SMS1_post] 
+ - [Na blogu 2][SMS2_post] 
   
 [//]:#
 [BW_repo]:<https://github.com/slawciu/rzeczybezinternetu/tree/master/BlinkWorld>
@@ -67,3 +72,6 @@ Uruchomienie modułu GSM Fibocom G510
 [1Wire_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/wazna-linia-cdds1822-par.html>
 [InitSMS_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/InitSMS>
 [InitSMS_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/sms-init.html>
+[SMS_repo]: <https://github.com/slawciu/rzeczybezinternetu/tree/master/ReceiveAndSendSMS>
+[SMS1_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/sms-przyszed-czego-chce.html>
+[SMS2_post]: <http://rzeczybezinternetu.blogspot.com/2016/04/wyslij-sms-o-tresci.html>
