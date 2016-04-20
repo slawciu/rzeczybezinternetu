@@ -1,5 +1,5 @@
 # Rzeczy bez Internetu
-Projekt agregujący proste przykłady użycia podstawowych mechanizmów mikrkokontrolera AVR Atmega.
+Projekt agregujący proste przykłady użycia podstawowych mechanizmów mikrokontrolera AVR Atmega.
 
 ## BlinkWorld
 Mruganie diodą, port ustawiony jako wyjście.
