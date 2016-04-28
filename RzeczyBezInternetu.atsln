@@ -25,6 +25,10 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "InitSMS", "InitSMS\InitSMS.
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ReceiveAndSendSMS", "ReceiveAndSendSMS\ReceiveAndSendSMS.cproj", "{11BBC9BE-173A-4252-ADF9-637E43F18C20}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "StepperMotor", "StepperMotor\StepperMotor.cproj", "{4B364A44-7252-4444-BCF9-B289BD5ACB46}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "FunWithFan", "FunWithFan\FunWithFan.cproj", "{65CDF8FD-5871-4095-981D-7C929B49FA24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -75,6 +79,14 @@ Global
 		{11BBC9BE-173A-4252-ADF9-637E43F18C20}.Debug|AVR.Build.0 = Debug|AVR
 		{11BBC9BE-173A-4252-ADF9-637E43F18C20}.Release|AVR.ActiveCfg = Release|AVR
 		{11BBC9BE-173A-4252-ADF9-637E43F18C20}.Release|AVR.Build.0 = Release|AVR
+		{4B364A44-7252-4444-BCF9-B289BD5ACB46}.Debug|AVR.ActiveCfg = Debug|AVR
+		{4B364A44-7252-4444-BCF9-B289BD5ACB46}.Debug|AVR.Build.0 = Debug|AVR
+		{4B364A44-7252-4444-BCF9-B289BD5ACB46}.Release|AVR.ActiveCfg = Release|AVR
+		{4B364A44-7252-4444-BCF9-B289BD5ACB46}.Release|AVR.Build.0 = Release|AVR
+		{65CDF8FD-5871-4095-981D-7C929B49FA24}.Debug|AVR.ActiveCfg = Debug|AVR
+		{65CDF8FD-5871-4095-981D-7C929B49FA24}.Debug|AVR.Build.0 = Debug|AVR
+		{65CDF8FD-5871-4095-981D-7C929B49FA24}.Release|AVR.ActiveCfg = Release|AVR
+		{65CDF8FD-5871-4095-981D-7C929B49FA24}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
